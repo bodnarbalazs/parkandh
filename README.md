@@ -44,4 +44,8 @@ verseny nyereményekért jófejségért sorsolás
 
 3000+ ember
 
+3 választási lehetőség:
+kevésbé értékesek pl: mozi/színház/múzeum jegyek, fürdő belépők, merch termékek
+közepesen értékesek pl: kondibérlet, éttermi étkezés, vásárlási utalványok
+értékesek pl: wellness hétvége, okos eszközök, tanfolyamok 
 

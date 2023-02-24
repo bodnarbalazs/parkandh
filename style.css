@@ -262,23 +262,54 @@ header .current-date{
 }
 
 .calendarbutton{
-    height: 10%;
-    width: 60%;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(0, 55, 103);
-    color: white;
-    font-size: 20px;
-    margin: 5%;
+  height: 10%;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(0, 55, 103);
+  color: white;
+  font-size: 20px;
+  margin: 5%;
 }
 .atadbtdiv{
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 100%;
 }
 .atadbtdiv .calendarbutton{
-    height: 80%
+  height: 80%;
+  width: 45%;
+  margin-left: 0;
+  margin-right: 0;
+
 }
 
 .toprow .khlogo{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
+}
+
+.atadp{
+  margin: 2%;
+  font-size: 20px;
+}
+
+.timediv{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.timeinput{
+  width: 40%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+
 }
