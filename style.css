@@ -1,7 +1,31 @@
 /* Login css */
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 html, body{
     height: 100%;
-    *margin: 0;
+    background: rgb(9, 7, 51);
+    background: linear-gradient(
+      60deg,
+      rgba(0, 55, 103, 1) 17%,
+      
+      rgba(0, 81, 151, 1) 100%
+      
+    );
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
 }
 
 .mainContainer{
@@ -14,33 +38,52 @@ html, body{
 #logindiv{
     background-color: rgb(0, 174, 239);
     display: flex;
-    height: 60%;
+    height: 30%;
     flex-direction: column;
     justify-content: center;
     margin-top: 20%;
     margin-bottom: 20%;
     padding: 10%;
     border-radius: 25px;
+    width: 65%;
+    align-self: center;
+}
+
+.toprow{
+    background-color: rgb(0, 174, 239);
+    display: flex;
+    justify-content: center;
+    padding: 3%;
 }
 
 .logininput{
+    margin: 3%;
     align-self: center;
-    height: 10%;
+    height: 20%;
     width: 90%;
     border-radius: 10px;
+    border: none;
+    font-size: 25px;
+
 }
 
 .loginbutton{
+    margin: 3%;
     align-self: center;
-    height: 10%;
-    width: 90%;
+    height: 20%;
+    width: 70%;
     border-radius: 10px;
-
+    border: none;
+    background-color: rgb(0, 55, 103);
+    color: white;
+    font-size: 25px;
 }
 
 .khlogo{
     width:30%;
     align-self: center;
+    /* background-color: rgba(228, 241, 253, 0.15); */
+    /* border-radius: 50%; */
 }
 
 .forgetpassword{
