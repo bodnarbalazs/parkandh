@@ -49,3 +49,25 @@ kevésbé értékesek pl: mozi/színház/múzeum jegyek, fürdő belépők, merc
 közepesen értékesek pl: kondibérlet, éttermi étkezés, vásárlási utalványok
 értékesek pl: wellness hétvége, okos eszközök, tanfolyamok 
 
+INSERT INTO users (name, private_parking, password, Home_Address)
+VALUES 
+  ('Sarah Jones', 'yes', 'sarah123', '123 Main St'),
+  ('David Lee', 'no', 'david456', '456 Elm St'),
+  ('Emily Kim', 'yes', 'emily789', '789 Oak St'),
+  ('Michael Chen', 'no', 'michael111', '111 Maple St'),
+  ('Melissa Wong', 'yes', 'melissa222', '222 Pine St'),
+  ('Daniel Smith', 'yes', 'daniel333', '333 Cedar St'),
+  ('Jessica Park', 'no', 'jessica444', '444 Oak St'),
+  ('Matthew Johnson', 'yes', 'matthew555', '555 Pine St'),
+  ('Natalie Kim', 'no', 'natalie666', '666 Maple St'),
+  ('William Lee', 'yes', 'william777', '777 Cedar St'),
+  ('Sophia Chen', 'no', 'sophia888', '888 Pine St'),
+  ('Christopher Wong', 'yes', 'christopher999', '999 Oak St'),
+  ('Ava Kim', 'yes', 'ava000', '000 Maple St'),
+  ('Jonathan Smith', 'no', 'jonathan111', '111 Cedar St'),
+  ('Olivia Park', 'yes', 'olivia222', '222 Oak St'),
+  ('Ethan Johnson', 'no', 'ethan333', '333 Maple St'),
+  ('Isabella Lee', 'yes', 'isabella444', '444 Cedar St'),
+  ('Benjamin Chen', 'yes', 'benjamin555', '555 Pine St'),
+  ('Madison Wong', 'no', 'madison666', '666 Oak St'),
+  ('Andrew Kim', 'yes', 'andrew777', '777 Cedar St');
