@@ -92,6 +92,7 @@ html, body{
     display: flex;
     justify-content: center;
     padding: 3%;
+    height: 300px;
 }
 
 .logininput{
