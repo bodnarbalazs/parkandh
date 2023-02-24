@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form{
+    height: 80%;
+    border-radius: 10%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 174, 239);
+}
+
+#date{
+    width: 70%;
+    font-size: large;
+}
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    width: 30%;
+}
+select{
+    display: none;
+}
