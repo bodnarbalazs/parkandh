@@ -1,0 +1,48 @@
+/* Login css */
+html, body{
+    height: 100%;
+    *margin: 0;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#logindiv{
+    background-color: rgb(0, 174, 239);
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    padding: 10%;
+    border-radius: 25px;
+}
+
+.logininput{
+    align-self: center;
+    height: 10%;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.loginbutton{
+    align-self: center;
+    height: 10%;
+    width: 90%;
+    border-radius: 10px;
+
+}
+
+.khlogo{
+    width:30%;
+    align-self: center;
+}
+
+.forgetpassword{
+    align-self: center;
+}
