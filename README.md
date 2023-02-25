@@ -49,25 +49,26 @@ kevésbé értékesek pl: mozi/színház/múzeum jegyek, fürdő belépők, merc
 közepesen értékesek pl: kondibérlet, éttermi étkezés, vásárlási utalványok
 értékesek pl: wellness hétvége, okos eszközök, tanfolyamok 
 
-INSERT INTO users (name, private_parking, password, Home_Address)
-VALUES 
-  ('Sarah Jones', 'yes', 'sarah123', '123 Main St'),
-  ('David Lee', 'no', 'david456', '456 Elm St'),
-  ('Emily Kim', 'yes', 'emily789', '789 Oak St'),
-  ('Michael Chen', 'no', 'michael111', '111 Maple St'),
-  ('Melissa Wong', 'yes', 'melissa222', '222 Pine St'),
-  ('Daniel Smith', 'yes', 'daniel333', '333 Cedar St'),
-  ('Jessica Park', 'no', 'jessica444', '444 Oak St'),
-  ('Matthew Johnson', 'yes', 'matthew555', '555 Pine St'),
-  ('Natalie Kim', 'no', 'natalie666', '666 Maple St'),
-  ('William Lee', 'yes', 'william777', '777 Cedar St'),
-  ('Sophia Chen', 'no', 'sophia888', '888 Pine St'),
-  ('Christopher Wong', 'yes', 'christopher999', '999 Oak St'),
-  ('Ava Kim', 'yes', 'ava000', '000 Maple St'),
-  ('Jonathan Smith', 'no', 'jonathan111', '111 Cedar St'),
-  ('Olivia Park', 'yes', 'olivia222', '222 Oak St'),
-  ('Ethan Johnson', 'no', 'ethan333', '333 Maple St'),
-  ('Isabella Lee', 'yes', 'isabella444', '444 Cedar St'),
-  ('Benjamin Chen', 'yes', 'benjamin555', '555 Pine St'),
-  ('Madison Wong', 'no', 'madison666', '666 Oak St'),
-  ('Andrew Kim', 'yes', 'andrew777', '777 Cedar St');
+
+INSERT INTO users (first_name, last_name, private_parking, password, home_address)
+VALUES
+  ('John', 'Doe', 'K3-27', 'password1', '123 Main St'),
+  ('Jane', 'Doe', 'null', 'password2', '456 Oak Ave'),
+  ('Bob', 'Smith', 'K3-65', 'password3', '789 Elm Rd'),
+  ('Mary', 'Johnson', 'null', 'password4', '321 Maple St'),
+  ('Mike', 'Brown', 'K2-8', 'password5', '654 Cedar Ave'),
+  ('Sarah', 'Davis', 'null', 'password6', '987 Pine Rd'),
+  ('David', 'Garcia', 'K2-95', 'password7', '246 Walnut St'),
+  ('Lisa', 'Martinez', 'null', 'password8', '135 Birch Ave'),
+  ('William', 'Anderson', 'K1-34', 'password9', '864 Oak St'),
+  ('Karen', 'Wilson', 'null', 'password10', '579 Maple Ave'),
+  ('Steven', 'Taylor', 'H3-87', 'password11', '392 Pine Rd'),
+  ('Amanda', 'Thomas', 'null', 'password12', '716 Cedar St'),
+  ('George', 'Hernandez', 'H3-21', 'password13', '485 Walnut Ave'),
+  ('Ashley', 'Moore', 'null', 'password14', '627 Maple Rd'),
+  ('Christopher', 'Jackson', 'H2-82', 'password15', '954 Oak Ave'),
+  ('Nicole', 'Martin', 'null', 'password16', '283 Cedar Rd'),
+  ('Kevin', 'Lee', 'H1-68', 'password17', '147 Birch St'),
+  ('Stephanie', 'Clark', 'null', 'password18', '368 Walnut Ave'),
+  ('Edward', 'Rodriguez', 'H1-25', 'password19', '719 Maple St'),
+  ('Melissa', 'Lewis', 'null', 'password20', '536 Pine Ave');
