@@ -38,13 +38,7 @@ function login() {
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(r => {
-            if (r.status == 400) {
-                alert("Hibás felhasználónév vagy jelszó!")
-                return;
-            }
-            return JSON.parse(r.body)
-        })
+        .then(r => JSON.parse(r))
         .then(d => {
             console.log(d);
         });

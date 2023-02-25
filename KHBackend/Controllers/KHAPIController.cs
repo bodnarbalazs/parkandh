@@ -13,10 +13,14 @@ namespace KHBackend.Controllers
         public IActionResult GetUserByEmail(string email,string password)
         {
             ParkContext parkContext = new ParkContext();
-            User? user =parkContext.Users.Where(u => u.Email == email.ToLower()).ToList().FirstOrDefault();
-            if (user==null||password != user.Password)
+            User? user =parkContext.Users.Where(u => u.Email == email).ToList().FirstOrDefault();
+            if (user == null)
             {
-                return BadRequest();
+                return Problem();
+            }
+            else if (user.Password!=password)
+            {
+                return Problem();
             }
             return Ok(user);
         }
