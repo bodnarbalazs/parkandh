@@ -37,10 +37,12 @@ function login() {
         .then(d => {
             console.log(d);
             localStorage.setItem("user", JSON.stringify(d));
+            console.log(d.privateParking=='null');
             if(d=="Hibás felhasználónév vagy jelszó."){
                 alert("Hibás adatok!")
             }
             else if(d.privateParking=='null'){
+                console.log("heeeeyhoooo");
                 window.location.replace("/keres.html");
             }else{
                 window.location.replace("/atad2.html");
