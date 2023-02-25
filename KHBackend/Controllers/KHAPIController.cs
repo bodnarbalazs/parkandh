@@ -14,13 +14,9 @@ namespace KHBackend.Controllers
         {
             ParkContext parkContext = new ParkContext();
             User? user =parkContext.Users.Where(u => u.Email == email.ToLower()).ToList().FirstOrDefault();
-            if (user==null)
+            if (user==null||password != user.Password)
             {
-                return BadRequest("Hibás felhasználónév vagy jelszó.");
-            }
-            else if(password != user.Password)
-            {
-                return BadRequest("Hibás felhasználónév vagy jelszó.");
+                return BadRequest();
             }
             return Ok(user);
         }

@@ -38,20 +38,14 @@ function login() {
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(d => {
-            console.log("d:");
-            console.log(d);
-            localStorage.setItem("user", JSON.stringify(d));
-            console.log(d.privateParking == 'null');
-            t = d;
-            if (d.email == null) {
-                alert("Hibás adatok!")
+        .then(r => {
+            if (r.status == 400) {
+                alert("Hibás felhasználónév vagy jelszó!")
+                return;
             }
-            else if (JSON.parse(d).privateParking == 'null') {
-                console.log("heeeeyhoooo");
-                window.location.replace("/keres.html");
-            } else {
-                window.location.replace("/atad2.html");
-            }
+            return JSON.parse(r.body)
         })
+        .then(d => {
+            console.log(d);
+        });
 }
