@@ -334,12 +334,12 @@ header .current-date{
 /* REWARD */
 
 .rewarddiv1{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .rewardp{
   background-color: white;
-  font-size: 25px;
+  font-size: 20px;
   margin: 2%;
   border-radius: 10px;
   padding: 2%;
@@ -349,9 +349,13 @@ header .current-date{
 }
 
 .mainrewarddiv{
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: s; */
+  align-self: center;
   margin-top: 10%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
+  height: 70%;
   background-color: rgb(0, 174, 239);
   border-radius: 20px;
   padding: 5%;
