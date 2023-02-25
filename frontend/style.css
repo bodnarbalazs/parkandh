@@ -69,7 +69,7 @@ html, body{
 }
 
 .repeatbackround{
-  background-image: url(./kh.png);
+  background-image: url(./images/kh.png);
   background-repeat: space;
   background-size: 15%;
   opacity: 0.1;
