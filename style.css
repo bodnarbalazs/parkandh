@@ -40,6 +40,8 @@ select{
 *{
     margin: 0;
     padding: 0;
+    opacity: 1;
+    z-index: 1;
 }
 @keyframes gradient {
     0% {
@@ -60,10 +62,24 @@ html, body{
       rgba(0, 55, 103, 1) 17%,
       
       rgba(0, 81, 151, 1) 100%
-      
     );
     background-size: 400% 400%;
     animation: gradient 3s ease infinite;
+    z-index: -2;
+}
+
+.repeatbackround{
+  background-image: url(./kh.png);
+  background-repeat: space;
+  background-size: 15%;
+  opacity: 0.1;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 0;
+  background-position: 100px 100px;
+  border: 10px solid transparent;
+  
 }
 
 .mainContainer{
