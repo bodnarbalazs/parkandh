@@ -19,23 +19,47 @@ const renderCalendar = () => {
     let liTag = "";
 
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+        liTag += `<li class="da inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
 
     for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
         // adding active class to li if the current day, month, and year matched
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
+        liTag += `<li class="da ${isToday}">${i}</li>`;
     }
 
     for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
-        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+        liTag += `<li class="da inactive">${i - lastDayofMonth + 1}</li>`
     }
+
+
+    const month_year=document.querySelector(".current-date").innerText;
+    const month=month_year.split(' ')[0];
+    const year=month_year.split(' ')[1];
+    document.querySelectorAll(".da").forEach(function(item){
+        const day=item.innerText;
+        item.id="a";
+    })
+
     currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
     daysTag.innerHTML = liTag;
 }
+
+function calendarId(){
+
+    const month_year=document.querySelector(".current-date").innerText;
+    const month=month_year.split(' ')[0];
+    const year=month_year.split(' ')[1];
+
+    document.querySelectorAll(".da").forEach(function(item){
+        const day=item.innerText;
+        item.id=year+"-"+month+"-"+day;
+    })
+}
+
 renderCalendar();
+calendarId();
 
 prevNextIcon.forEach(icon => { // getting prev and next icons
     icon.addEventListener("click", () => { // adding click event on both icons
@@ -63,6 +87,14 @@ function menu() {
       x.style.display = "block";
     }
   }
+
+
+document.getElementById("prev").addEventListener("click",()=>{
+    calendarId();
+})
+document.getElementById("next").addEventListener("click",()=>{
+    calendarId();
+})
 
 // Lapok között lépkedés
 
