@@ -25,6 +25,8 @@ public partial class ParkContext : DbContext
 
     public virtual DbSet<ParkingReservation> ParkingReservations { get; set; }
 
+    public virtual DbSet<ParkingSpace> ParkingSpaces { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -135,6 +137,18 @@ public partial class ParkContext : DbContext
             entity.HasOne(d => d.SurrogatedNavigation).WithMany(p => p.ParkingReservationSurrogatedNavigations)
                 .HasForeignKey(d => d.Surrogated)
                 .HasConstraintName("fk7");
+        });
+
+        modelBuilder.Entity<ParkingSpace>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__parking___3213E83FDCD11D84");
+
+            entity.ToTable("parking_spaces");
+
+            entity.Property(e => e.Id)
+                .HasMaxLength(64)
+                .IsUnicode(false)
+                .HasColumnName("id");
         });
 
         modelBuilder.Entity<User>(entity =>
