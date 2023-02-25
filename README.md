@@ -49,3 +49,26 @@ kevésbé értékesek pl: mozi/színház/múzeum jegyek, fürdő belépők, merc
 közepesen értékesek pl: kondibérlet, éttermi étkezés, vásárlási utalványok
 értékesek pl: wellness hétvége, okos eszközök, tanfolyamok 
 
+
+INSERT INTO users (first_name, last_name, private_parking, password, home_address)
+VALUES
+  ('John', 'Doe', 'K3-27', 'password1', '123 Main St'),
+  ('Jane', 'Doe', 'null', 'password2', '456 Oak Ave'),
+  ('Bob', 'Smith', 'K3-65', 'password3', '789 Elm Rd'),
+  ('Mary', 'Johnson', 'null', 'password4', '321 Maple St'),
+  ('Mike', 'Brown', 'K2-8', 'password5', '654 Cedar Ave'),
+  ('Sarah', 'Davis', 'null', 'password6', '987 Pine Rd'),
+  ('David', 'Garcia', 'K2-95', 'password7', '246 Walnut St'),
+  ('Lisa', 'Martinez', 'null', 'password8', '135 Birch Ave'),
+  ('William', 'Anderson', 'K1-34', 'password9', '864 Oak St'),
+  ('Karen', 'Wilson', 'null', 'password10', '579 Maple Ave'),
+  ('Steven', 'Taylor', 'H3-87', 'password11', '392 Pine Rd'),
+  ('Amanda', 'Thomas', 'null', 'password12', '716 Cedar St'),
+  ('George', 'Hernandez', 'H3-21', 'password13', '485 Walnut Ave'),
+  ('Ashley', 'Moore', 'null', 'password14', '627 Maple Rd'),
+  ('Christopher', 'Jackson', 'H2-82', 'password15', '954 Oak Ave'),
+  ('Nicole', 'Martin', 'null', 'password16', '283 Cedar Rd'),
+  ('Kevin', 'Lee', 'H1-68', 'password17', '147 Birch St'),
+  ('Stephanie', 'Clark', 'null', 'password18', '368 Walnut Ave'),
+  ('Edward', 'Rodriguez', 'H1-25', 'password19', '719 Maple St'),
+  ('Melissa', 'Lewis', 'null', 'password20', '536 Pine Ave');
