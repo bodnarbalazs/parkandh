@@ -24,11 +24,11 @@ namespace KHBackend.Controllers
             }
             return Ok(user);
         }
+        
         [HttpGet]
         [Route("getReservationsByUserId/{UserId}")]
         public IActionResult GetReservationsByUserId(int UserId)
         {
-
             return Ok(UserId);
         }
         [HttpGet]
