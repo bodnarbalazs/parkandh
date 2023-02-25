@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "fzc74foYtL+2tmuuO+8rmOae3CmIleYa99ynSZq81nk=",
+  "Source": "KHBackend",
+  "BasePath": "_content/KHBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "KHBackend\\wwwroot",
+      "Source": "KHBackend",
+      "ContentRoot": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\",
+      "BasePath": "_content/KHBackend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\index.html",
+      "SourceId": "KHBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\",
+      "BasePath": "_content/KHBackend",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
