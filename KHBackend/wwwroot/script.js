@@ -27,3 +27,10 @@ function sender(input){
         result=>console.log(result)
     )
 }
+function login() {
+    const email = "jw@gmail.com";
+    const pass = "123456"
+    fetch("api/getUserByEmail/" + email + "/" + pass)
+        .then(r => r.json())
+        .then(d => console.log(d))
+}
