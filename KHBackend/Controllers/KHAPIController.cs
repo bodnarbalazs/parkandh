@@ -8,11 +8,11 @@ namespace KHBackend.Controllers
     public class KHAPIController : ControllerBase
     {
         [HttpGet]
-        [Route("test")]
-        public IActionResult Test()
+        [Route("getUserByEmail/{Email}/{Password}")]
+        public IActionResult Test(string email)
         {
-
-            return Ok("Anyád");
+             
+            return Ok(email);
         }
     }
 }
