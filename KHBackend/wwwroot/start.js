@@ -6,9 +6,13 @@
 //   });
   
 
-function stopanimation(){
+function stopanimation() {
     const animation = document.querySelector('.animation');
     animation.classList.remove('animation');
-}
+  }
+  
 
-setTimeout(stopanimation(), 3000);
+
+document.onload = () => {
+    setTimeout(stopanimation, 3000);
+  };
