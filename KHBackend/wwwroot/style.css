@@ -189,6 +189,7 @@ html, body{
 }
 
 .parkreq{
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,7 +217,7 @@ body.maincalendar{
 .wrapper header{
   display: flex;
   align-items: center;
-  padding: 25px 30px 10px;
+  padding: 10px 15px 5px;
   justify-content: space-between;
 }
 header .icons{
@@ -535,4 +536,23 @@ nav ul li.active {
     top: 100%;
     left: 0;
   }
+}
+
+
+
+
+@keyframes swipe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.animation {
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 100%;
+  animation: swipe 4s linear infinite;
+  z-index: 5;
 }
