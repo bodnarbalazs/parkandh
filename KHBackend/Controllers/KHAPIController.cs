@@ -67,5 +67,21 @@ namespace KHBackend.Controllers
 
             return Ok(UserId);
         }
+        [HttpPost]
+        [Route("postCarPoolDriverSubmission/{UserId}/{Limit}/{StartDate}")]
+
+        public IActionResult PostCarPoolDriverSubmission(int UserId, string userSettings,DateTime startDate)
+        {
+
+            return Ok(UserId);
+        }
+        [HttpPost]
+        [Route("postCarPoolMemberRequest/{UserId}/{CarPoolId}")]
+
+        public IActionResult PostCarPoolMemberRequest(int UserId, int CarPoolId)
+        {
+
+            return Ok(UserId);
+        }
     }
 }
