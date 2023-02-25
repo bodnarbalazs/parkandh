@@ -13,7 +13,7 @@ namespace KHBackend.Controllers
         public IActionResult GetUserByEmail(string email,string password)
         {
             ParkContext parkContext = new ParkContext();
-            User? user =parkContext.Users.Where(u => u.Email == email).ToList().FirstOrDefault();
+            User? user =parkContext.Users.Where(u => u.Email == email.ToLower()).ToList().FirstOrDefault();
             if (user==null)
             {
                 return NotFound("Hibás felhasználónév vagy jelszó.");
