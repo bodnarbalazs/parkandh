@@ -30,11 +30,20 @@ function sender(input){
 function login(email,pass) {
     fetch("api/getUserByEmail/" + email + "/" + pass)
         .then(r => r.json())
-        .then(d => console.log(d))
+        .then(d => {
+            localStorage.setItem("user", d);
+        }).then(
+            d=>console.log(d)
+        )
 }
 document.getElementById("login").addEventListener("click",function(e){
     e.preventDefault();
     const email=document.getElementById("user").value;
     const pass=document.getElementById("pass").value;
     login(email,pass)
+})
+
+document.getElementById("requestbt").addEventListener("click",function(e){
+    e.preventDefault();
+
 })
