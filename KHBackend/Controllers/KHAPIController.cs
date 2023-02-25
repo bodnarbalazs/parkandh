@@ -38,10 +38,19 @@ namespace KHBackend.Controllers
 
             return Ok(UserId);
         }
+        [HttpGet]
+        [Route("getAvailableParkingSpaces/{FromDate}/{ToDate}")]
+        public IActionResult GetAvailableParkingSpaces(DateTime fromDate, DateTime toDate)
+        {
+            ParkContext parkContext = new ParkContext();
+            var availableSpaces=parkContext.ParkingReservations.Where(r => r.Surrogated == null && r.FromDate <= fromDate && r.ToDate >= toDate).ToList();
+            return Ok(availableSpaces);
+        }
         [HttpPost]
         [Route("postParkingRequest/{UserId}/{FromDate}/{ToDate}")]
         public IActionResult PostParkingRequest(int UserId,DateTime fromDate,DateTime toDated)
         {
+            ParkContext parkContext = new ParkContext();
 
             return Ok(UserId);
         }
@@ -123,7 +132,7 @@ namespace KHBackend.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Nem sikerült a felhasználó létrehozása."+ex.InnerException.Message);
+                return BadRequest("Nem sikerült a felhasználó létrehozása.");
             }
         }
         [HttpDelete]
@@ -131,15 +140,17 @@ namespace KHBackend.Controllers
 
         public IActionResult DeleteUser(int UserId)
         {
+            ParkContext parkContext = new ParkContext();
             try
             {
-
+                parkContext.Users.Remove(parkContext.Users.Where(u=>u.Id==UserId).First());
+                parkContext.SaveChanges();
+                return Ok("Felhasználó sikeresen eltávolítva.");
             }
             catch (Exception)
             {
-
+                return BadRequest("Nem sikerült a felhasználó törlése.");
             }
-            return Ok(UserId);
         }
     }
 }
