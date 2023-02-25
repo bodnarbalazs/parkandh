@@ -16,11 +16,11 @@ namespace KHBackend.Controllers
             User? user =parkContext.Users.Where(u => u.Email == email.ToLower()).ToList().FirstOrDefault();
             if (user==null)
             {
-                return NotFound("Hibás felhasználónév vagy jelszó.");
+                return BadRequest("Hibás felhasználónév vagy jelszó.");
             }
             else if(password != user.Password)
             {
-                return NotFound("Hibás felhasználónév vagy jelszó.");
+                return BadRequest("Hibás felhasználónév vagy jelszó.");
             }
             return Ok(user);
         }

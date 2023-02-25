@@ -7,28 +7,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    
 
 </head>
 <body>
-    <div class="repeatbackround"></div>
-    <!-- <div class="toprow">
+    <div id="animation" class="animation">
+        <div class="repeatbackround"></div>
+        <!-- <div class="toprow">
+                <img class="khlogo" src="/images/logo3.png" alt="">
+            </div> -->
+        
+        <div class="laptopsize">
+            <div class="mainContainer">
             <img class="khlogo" src="/images/logo3.png" alt="">
-        </div> -->
-    
-    <div class="laptopsize">
-        <div class="mainContainer">
-        <img class="khlogo" src="/images/logo3.png" alt="">
-        <div id="logindiv">
-            
-            <input class="logininput" id="user" type="text" placeholder="E-mail cím">
-            <input class="logininput" id="pass" type="password" placeholder="Jelszó">
-            <button class="loginbutton" id="login" onclick="login()">Login</button>
-            <a class="forgetpassword" href="">Elfelejett jelszó</a>
+            <div id="logindiv">
+                
+                <input class="logininput" id="user" type="text" placeholder="E-mail cím">
+                <input class="logininput" id="pass" type="password" placeholder="Jelszó">
+                <button class="loginbutton" id="login" onclick="login()">Login</button>
+                <a class="forgetpassword" href="">Elfelejett jelszó</a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
         </div>
     </div>
-
-    <script src="script.js"></script>
-    </div>
-    
 </body>
 </html>
+<script src="start.js"></script>

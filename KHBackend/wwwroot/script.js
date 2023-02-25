@@ -27,21 +27,30 @@ function sender(input){
         result=>console.log(result)
     )
 }
+let t = null;
 function login() {
     const email=document.getElementById("user").value;
     const pass = document.getElementById("pass").value;
+    if (email == "" || pass == "") {
+        alert("A bejelentkezési mezők nem lehetnek üresek.")
+        return;
+    }
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(r => r.json())
         .then(d => {
+            console.log("d:");
             console.log(d);
             localStorage.setItem("user", JSON.stringify(d));
-            if(d=="Hibás felhasználónév vagy jelszó.")
+            console.log(d.privateParking == 'null');
+            t = d;
+            if (d.email == null) {
                 alert("Hibás adatok!")
-            else if(d.private_parking=='null'){
+            }
+            else if (JSON.parse(d).privateParking == 'null') {
+                console.log("heeeeyhoooo");
                 window.location.replace("/keres.html");
-            }else{
+            } else {
                 window.location.replace("/atad2.html");
             }
         })
