@@ -1,4 +1,4 @@
-document.getElementById("random").addEventListener("click",function(e){
+/*document.getElementById("random").addEventListener("click",function(e){
     e.preventDefault();
     sender();
 })
@@ -11,7 +11,7 @@ document.getElementById("lend").addEventListener("click",function(e){
 document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
-})
+})*/
 
 function sender(input){
     const date=document.getElementById("date").value
@@ -29,17 +29,20 @@ function sender(input){
 }
 function login() {
     const email=document.getElementById("user").value;
-    const pass=document.getElementById("pass").value;
+    const pass = document.getElementById("pass").value;
+    console.log(email);
+    console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
         .then(r => r.json())
         .then(d => {
-            localStorage.setItem("user", d);
-        }).then(
-            d=>console.log(d)
-        )
+            console.log(d);
+            localStorage.setItem("user", JSON.stringify(d));
+            if(d=="Hibás felhasználónév vagy jelszó.")
+                alert("Hibás adatok!")
+            else if(d.private_parking=='null'){
+                window.location.replace("/keres.html");
+            }else{
+                window.location.replace("/atad2.html");
+            }
+        })
 }
-
-document.getElementById("requestbt").addEventListener("click",function(e){
-    e.preventDefault();
-
-})
