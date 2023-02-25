@@ -27,7 +27,9 @@ function sender(input){
         result=>console.log(result)
     )
 }
-function login(email,pass) {
+function login() {
+    const email=document.getElementById("user").value;
+    const pass=document.getElementById("pass").value;
     fetch("api/getUserByEmail/" + email + "/" + pass)
         .then(r => r.json())
         .then(d => {
@@ -36,12 +38,6 @@ function login(email,pass) {
             d=>console.log(d)
         )
 }
-document.getElementById("login").addEventListener("click",function(e){
-    e.preventDefault();
-    const email=document.getElementById("user").value;
-    const pass=document.getElementById("pass").value;
-    login(email,pass)
-})
 
 document.getElementById("requestbt").addEventListener("click",function(e){
     e.preventDefault();
