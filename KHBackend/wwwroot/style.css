@@ -563,7 +563,6 @@ nav ul li.active {
 .animation {
   animation-name: example;
   animation-duration: 2s;
-  z-index: 10;
   position: absolute;
   height: 100%;
   width: 100%;
