@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="utf-8">
-        <title>Dynamic Calendar JavaScript | CodingNepal</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google Font Link for Icons -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-        <script src="test.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-        <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
-        <script src="info.js" defer></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Calendar JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="test.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
+    <script src="info.js" defer></script>
+    <script src="usersetting.js" defer></script>
+</head>
 <body>
     <div class="repeatbackround"></div>
     <div class="laptopsize">
@@ -27,19 +28,21 @@
             <p>-Pont gyűjtése: parkolóhely átadással, telekocsiban való részvétellel</p>
             <p>-Pontok elköltése: Egyéni nyereményekre, illetve minden kapott pont közelíti a csapatot a közös célhoz</p>
           </div>
-        <div class="mainsettingdiv">
-            <p class="carpooltitle">Beállítások</p>
-            <div class="settingpointdiv"> <label for="adress">Lakcím</label><input type="text" id="adress" placeholder="1135, Budapest, Király utca, 3/A"></div>
-           
-            <div class="settingpointdiv"><label for="pushnotif">Kérek pushnotification-t</label><input class="checkbox" type="checkbox" id="pushnotif"></div>
-            
-            <div class="settingpointdiv"><label for="mailnotif">Kérek mail-ben notification-t</label><input class="checkbox" type="checkbox" id="mailnotif"></div>
-            <div class="settingpointdiv"><label for="lang">Nyelv</label>
-                <button class="langbt">Magyar</button>
-                <button class="langbt">English</button>
-            </div>
-            <button class="calendarbutton">Mentés</button>
-        </div>
+          <div class="mainsettingdiv">
+              <p class="carpooltitle">Beállítások</p>
+              <div class="settingpointdiv"> <label for="adress">Lakcím</label><input type="text" id="adress" placeholder="1135, Budapest, Király utca, 3/A"></div>
+
+              <div class="settingpointdiv"><label for="pushnotif">Kérek pushnotification-t</label><input class="checkbox" type="checkbox" id="pushnotif"></div>
+
+              <div class="settingpointdiv"><label for="mailnotif">Kérek mail-ben notification-t</label><input class="checkbox" type="checkbox" id="mailnotif"></div>
+              <div class="settingpointdiv">
+                  <label for="lang">Nyelv</label>
+                  <button class="langbt">Magyar</button>
+                  <button class="langbt">English</button>
+              </div>
+              <button class="calendarbutton">Mentés</button>
+              <button class="calendarbutton" onclick="Logout()">Kijelentkezés</button>
+          </div>
         
         <div class="bottomrow">
             <a id="activemenu" href="./usersetting.html" class="fa fa-cogs" aria-hidden="true"></a>
