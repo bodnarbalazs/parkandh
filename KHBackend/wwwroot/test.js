@@ -51,10 +51,14 @@ function calendarId(){
     const month_year=document.querySelector(".current-date").innerText;
     const month=month_year.split(' ')[0];
     const year=month_year.split(' ')[1];
-
+    const monthNames = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+      ];
     document.querySelectorAll(".da").forEach(function(item){
         const day=item.innerText;
-        item.id=year+"-"+month+"-"+day;
+        item.id=year+"-"+"0"+(monthNames.indexOf(month)+1)+"-"+day;
     })
 }
 
