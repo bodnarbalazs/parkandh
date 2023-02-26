@@ -671,13 +671,13 @@ nav ul li.active {
 }
 
 .havespot{
-  border-color: green;
-  border-radius: 50%;
+  border-color: green !important;
+  border-radius: 50% !important;
 
 }
 
 .nhavespot{
-  border-color: red;
-  border-radius: 50%;
+  border-color: red !important;
+  border-radius: 50% !important;
 }
 
