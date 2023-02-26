@@ -49,7 +49,7 @@ function login() {
             user = data;
             localStorage.setItem("user", JSON.stringify(user));
             if (user.privateParking != "null") {
-                location.replace("/atad.html")
+                location.replace("/atad2.html")
             } else {
                 location.replace("/keres.html")
             }
@@ -59,7 +59,7 @@ document.onload = () => {
     if (localStorage.getItem("user")!=null) {
         user = localStorage.getItem("user");
         if (user.privateParking!="null") {
-            location.replace("/atad.html")
+            location.replace("/atad2.html")
         } else {
             location.replace("/keres.html")
         }
