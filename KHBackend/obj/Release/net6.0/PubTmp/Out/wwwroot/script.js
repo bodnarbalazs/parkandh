@@ -12,7 +12,7 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-
+let user = undefined;
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{
@@ -38,14 +38,30 @@ function login() {
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(r => {
-            if (r.status == 400) {
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data.id);
+            if (data.id==null) {
                 alert("Hibás felhasználónév vagy jelszó!")
+                location.reload();
                 return;
             }
-            return JSON.parse(r.body)
-        })
-        .then(d => {
-            console.log(d);
+            user = data;
+            localStorage.setItem("user", JSON.stringify(user));
+            if (user.privateParking != "null") {
+                location.replace("/atad.html")
+            } else {
+                location.replace("/keres.html")
+            }
         });
+}
+document.onload = () => {
+    if (localStorage.getItem("user")!=null) {
+        user = localStorage.getItem("user");
+        if (user.privateParking!="null") {
+            location.replace("/atad.html")
+        } else {
+            location.replace("/keres.html")
+        }
+    }
 }
