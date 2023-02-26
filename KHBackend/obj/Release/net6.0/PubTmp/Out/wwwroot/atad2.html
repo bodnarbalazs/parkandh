@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
     <script src="info.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="atad2.js"></script>
   </head>
   <body onload="getReservationsByUserId()">
    
     <div class="repeatbackround"></div>     
     <div class="laptopsize">
       <div class="toprow">
-        <div class="coindiv">
-          <p class="coinnum">85</p>
-          <i class="fa-solid fa-coins"></i>
-        </div>
+          <div class="coindiv">
+              <i class="fa-solid fa-coins"></i>
+              <p class="coinnum">85</p>
+          </div>
         <img class="khlogo" src="./images/logo3.png" alt="">
         <i class="fa fa-circle-info" onclick="info()"></i>
       </div>
@@ -62,7 +63,7 @@
           </div>
           <p class="atadp">Átadom a helyem:</p>
           <div class="atadbtdiv">
-              <button class="calendarbutton" id="random" onclick="test()">Bárkinek</button>
+              <button class="calendarbutton" id="random" onclick="SubmitParkingReservation()">Bárkinek</button>
               <button class="calendarbutton" id="lend">Adott személy</button>
           </div>
           

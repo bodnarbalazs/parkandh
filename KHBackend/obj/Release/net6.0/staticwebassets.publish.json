@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2pccDcd3FosWrfNEH4eN/8vpxiwvbzRPVOFmJZL+1oQ=",
+  "Hash": "rh5foz/81vzOqy0EMeuRy2C6eiJ26e0LS7UcY8XWz9w=",
   "Source": "KHBackend",
   "BasePath": "_content/KHBackend",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\atad2.html"
+    },
+    {
+      "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\atad2.js",
+      "SourceId": "KHBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\",
+      "BasePath": "_content/KHBackend",
+      "RelativePath": "atad2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\atad2.js"
     },
     {
       "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\drivercarpool.html",
@@ -304,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\usersetting.html"
+    },
+    {
+      "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\usersetting.js",
+      "SourceId": "KHBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\",
+      "BasePath": "_content/KHBackend",
+      "RelativePath": "usersetting.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersetting.js"
     }
   ]
 }

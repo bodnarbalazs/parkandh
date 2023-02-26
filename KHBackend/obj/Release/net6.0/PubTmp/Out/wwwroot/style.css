@@ -395,7 +395,8 @@ header .current-date{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin-top: 10%;
+  /* margin-top: 12%; */
+  padding-top: 20%;
   font-size: 20px;
   color: #fff;
   overflow: scroll;
@@ -676,5 +677,17 @@ nav ul li.active {
 
 .nhavespot::before{
   background-color: red !important;
+}
+
+.pastc{
+  background-color: #fff;
+  opacity: 0.8;
+
+}
+
+.newc{
+  background-color:#aaa;
+  opacity: 0.8;
+
 }
 
