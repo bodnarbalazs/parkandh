@@ -14,7 +14,8 @@ document.querySelector("select").addEventListener("change",function(e){
 })*/
 var user = null;
 window.onload = () => {
-        user = JSON.parse(localStorage.getItem("user"));
+    user = JSON.parse(localStorage.getItem("user"));
+    document.getElementsByClassName("coinnum")[0].innerHTML = user.coin;
 }
 function sender(input){
     const date=document.getElementById("date").value
