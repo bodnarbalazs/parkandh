@@ -10,15 +10,17 @@ namespace KHBackend.Controllers
     {
         [HttpGet]
         [Route("getUserByEmail/{Email}/{Password}")]
-        public IActionResult GetUserByEmail(string email,string password)
+        public IActionResult GetUserByEmail(string Email,string Password)
         {
+            Email = "jw@gmail.com";
             ParkContext parkContext = new ParkContext();
-            User? user =parkContext.Users.Where(u => u.Email == email).ToList().FirstOrDefault();
+            int c=parkContext.Users.Count();
+            User? user =parkContext.Users.Where(u => u.Email == Email).ToList().FirstOrDefault();
             if (user == null)
             {
                 return Problem();
             }
-            else if (user.Password!=password)
+            else if (user.Password!=Password)
             {
                 return Problem();
             }
