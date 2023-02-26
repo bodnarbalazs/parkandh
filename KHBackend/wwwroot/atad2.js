@@ -16,4 +16,5 @@ function giveSpot(element){
             alert("Sikeresen leadtad a parkolót!");
             user.coin++;
         })
+    document.getElementById(clickedId).style.backgroundColor="red";
 }
