@@ -43,11 +43,28 @@ function handleTouchMove(evt) {
     // Check if the swipe is bigger than half of the screen width
     if ( Math.abs( xDiff ) > 12 ) {
         if ( xDiff > 0) {
-            location.replace("");
-            alert("right");
+            console.log(location.href.split("/").pop())
+            if(location.href.split("/").pop()  == "drivercarpool.html"){
+                location.replace("./reward.html");
+            }
+            if(location.href.split("/").pop()  == "atad2.html"){
+                location.replace("./drivercarpool.html");
+            }
+            if(location.href.split("/").pop()  == "usersetting.html"){
+                location.replace("./atad2.html");
+            }
             console.log(xDiff)
         } else {
-            alert("left");
+            if(location.href.split("/").pop()  == "reward.html"){
+                location.replace("./drivercarpool.html");
+            }
+            if(location.href.split("/").pop()  == "drivercarpool.html"){
+                location.replace("./atad2.html");
+            }
+            if(location.href.split("/").pop()  == "atad2.html"){
+                location.replace("./usersetting.html");
+            }
+            // alert("left");
         }                       
     }
 
