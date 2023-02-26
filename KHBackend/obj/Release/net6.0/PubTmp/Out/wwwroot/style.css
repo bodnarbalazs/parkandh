@@ -117,13 +117,53 @@ html, body{
 .toprow{
     background-color: rgb(0, 174, 239);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
     width: 100%;
     position: fixed;
     top: 0;
     max-width: 400px;
+}
+
+.fa-circle-info{
+  margin-right: 3%;
+}
+
+.fa-coins{
+  color: #fff;
+  font-size: 23px;
+  margin-left: 3%;
+}
+
+.coindiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.coinnum{
+  color: #fff;
+  font-size: 23px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.infodiv{
+  display: none;
+  background-color: #fff;
+  width: 70%;
+  height: auto;
+  padding: 3%;
+  border-radius: 15px;
+  opacity: 0.85;
+  position: fixed;
+  top: 8%;
+  z-index: 10;
+  font-size: 20px;
+}
+
+#nodisplay{
+  color: rgb(0, 174, 239);
 }
 
 .bottomrow{
@@ -189,10 +229,10 @@ html, body{
 }
 
 .parkreq{
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 80%;
     margin: 4%;
@@ -328,7 +368,8 @@ header .current-date{
 
 .atadp{
   margin: 2%;
-  font-size: 20px;
+  font-size: 25px;
+  color: #fff;
 }
 
 .timediv{
@@ -351,7 +392,12 @@ header .current-date{
 /* REWARD */
 
 .rewarddiv1{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   font-size: 20px;
+  color: #fff;
+  overflow: hidden;
 }
 
 .rewardp{
@@ -363,12 +409,14 @@ header .current-date{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: black;
+  opacity: 0.8;
 }
 
 .mainrewarddiv{
   display: flex;
   flex-direction: column;
-  /* justify-content: s; */
+  justify-content: space-around;
   align-self: center;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -483,7 +531,7 @@ nav ul li.active {
   background-color: #fff;
   border-radius: 10px;
   height: 7%;
-  margin: 1%;
+  margin: 2% 1% 2% 1%;
 }
 
 #adress{
@@ -509,7 +557,7 @@ nav ul li.active {
   flex-direction: column;
   /* justify-content: s; */
   align-self: center;
-  height: 80%;
+  height: 25%;
   background-color: rgb(0, 174, 239);
   border-radius: 20px;
   padding: 5%;
@@ -566,4 +614,51 @@ nav ul li.active {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+
+/* Driver carpool */
+.carpooltitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  vertical-align: baseline;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 15px;
+  height: 10%;
+}
+
+.togglediv{
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.carpooltoggle{
+  margin: 3%;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: rgb(0,174,239);
+
+  color: white;
+  font-size: 25px;
+}
+
+#activetoggle {
+  background-color: rgba(0, 55, 103, 1); 
+}
+
+.calendrabt{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }

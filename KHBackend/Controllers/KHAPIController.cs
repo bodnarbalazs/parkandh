@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using KHBackend.Models;
+using KHBackend.Automations;
 
 namespace KHBackend.Controllers
 {
@@ -136,8 +137,21 @@ namespace KHBackend.Controllers
                 return BadRequest("Nem sikerült a felhasználó létrehozása.");
             }
         }
+        [HttpPost]
+        [Route("postAdmin/{magic}")]
+
+        public IActionResult PostAdmin(string magic)
+        {
+            if (magic=="unga")
+            {
+                GenerateReservations.Setup();
+                return Ok("bunga");
+            }
+            return BadRequest();
+        }
         [HttpDelete]
         [Route("deleteUser/{UserId}")]
+
 
         public IActionResult DeleteUser(int UserId)
         {

@@ -11,28 +11,30 @@
     <script src="test.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
+    <script src="info.js" defer></script>
   </head>
   <body>
     <div class="repeatbackround"></div>
-
     <div class="laptopsize">
       <div class="toprow">
+        <div class="coindiv">
+          <p class="coinnum">85</p>
+          <i class="fa-solid fa-coins"></i>
+        </div>
         <img class="khlogo" src="./images/logo3.png" alt="">
-          <!-- <i id="MenuIcon" class="fa fa-bars" onclick="menu()"></i> -->
-          
+        <i class="fa fa-circle-info" onclick="info()"></i>
       </div>
-      <!-- <div id="myLinks">
-          <nav>
-            <p id="ProjectName">CICR PROJECT</p>
-            <ul>
-              <li id="ENGHUPage"><a href="./indexeng.html">Parkoló</a></li>
-              <li id="NavSolution" onclick="FunctionSolution()"><a>Telekocsi</a></li>
-              <li id="NavProduct" onclick="FunctionProduct()"><a>Rewards</a></li>
-              <li id="NavTeam" onclick="FunctionTeam()"><a>Settings</a></li>
-            </ul>
-          </nav>
-        </div> -->
+      <div class="infodiv" id="infodiv">
+        <p>-Pont gyűjtése: parkolóhely átadással, telekocsiban való részvétellel</p>
+        <p>-Pontok elköltése: Egyéni nyereményekre, illetve minden kapott pont közelíti a csapatot a közös célhoz</p>
+      </div>
       <div class="parkreq">
+        <div class="calendrabt">
+          <p class="carpooltitle">Telekocsi</p>
+          <div class="togglediv">
+          <button onclick="window.location.href='./drivercarpool.html';" class="carpooltoggle" id="activetoggle">Söfőr</button>
+          <button onclick="window.location.href='./membercarpool.html';" class="carpooltoggle">Utas</button>
+          </div>
           <div class="maincalendar">
               <div class="wrapper">
                   <header>
@@ -57,14 +59,18 @@
               </div>
                
           </div>
-          <div class="timediv">
-            <input class="timeinput" type="time" value="00:01">
-            <input type="number" placeholder="Hány ember fér be?">
+        </div>
+          <div class="carpools">
+            <div class="timediv">
+              <input class="timeinput" type="time" value="00:01">
+              <input type="number" placeholder="Hány ember fér be?">
+            </div>
+            <!-- <p class="atadp">Posztolom</p> -->
+            <div class="atadbtdiv">
+                <button class="calendarbutton" id="driversubmit">Posztolom</button>
+            </div>
           </div>
-          <!-- <p class="atadp">Posztolom</p> -->
-          <div class="atadbtdiv">
-              <button class="calendarbutton" id="driversubmit">Posztolom</button>
-          </div>
+          
           
           
       </div>
