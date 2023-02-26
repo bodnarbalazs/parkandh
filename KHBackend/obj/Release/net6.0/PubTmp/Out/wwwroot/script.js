@@ -12,7 +12,7 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-let user = undefined;
+let user = null;
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{
@@ -65,3 +65,27 @@ document.onload = () => {
         }
     }
 }
+
+function getMonthName(monthNumber) {
+    const date = new Date();
+    date.setMonth(monthNumber - 1);
+  
+    return date.toLocaleString('en-US', { month: 'long' });
+}
+
+function getReservationsByUserId() {
+    fetch("api/getReservationsByUserId/"+user.id)
+    .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            for(i=0; i<data.length; i++){
+                console.log(data[i].fromDate.split("T")[0])
+                if(data[i].ownerId == i.surrogated){
+                    document.getElementById(data[i].fromDate.split("T")[0]).style.backgroundColor = "green"
+                }
+                else{
+                    document.getElementById(data[i].fromDate.split("T")[0]).style.backgroundColor = "red"
+                }
+                
+            }})
+} 

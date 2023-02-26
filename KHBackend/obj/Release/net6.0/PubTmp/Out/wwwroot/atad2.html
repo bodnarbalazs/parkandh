@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
     <script src="info.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body onload="getReservationsByUserId()">
    
     <div class="repeatbackround"></div>     
     <div class="laptopsize">
@@ -61,7 +62,7 @@
           </div>
           <p class="atadp">Átadom a helyem:</p>
           <div class="atadbtdiv">
-              <button class="calendarbutton" id="random">Bárkinek</button>
+              <button class="calendarbutton" id="random" onclick="test()">Bárkinek</button>
               <button class="calendarbutton" id="lend">Adott személy</button>
           </div>
           
