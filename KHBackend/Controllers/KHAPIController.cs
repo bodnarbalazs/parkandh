@@ -31,7 +31,16 @@ namespace KHBackend.Controllers
         [Route("getReservationsByUserId/{UserId}")]
         public IActionResult GetReservationsByUserId(int UserId)
         {
-            return Ok(UserId);
+            ParkContext parkContext = new ParkContext();
+            try
+            {
+                return Ok(parkContext.ParkingReservations.Where(r=>r.Owner.Id==UserId).ToList());
+            }
+            catch (Exception)
+            {
+                return Problem();
+            }
+            
         }
         [HttpGet]
         [Route("getAvailableCarPools/{UserId}")]
