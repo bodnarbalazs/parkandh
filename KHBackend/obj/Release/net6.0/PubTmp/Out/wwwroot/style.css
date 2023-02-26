@@ -70,7 +70,7 @@ html, body{
 
 .laptopsize{
   height: 100%;
-  max-width: 400px;
+  max-width: 500px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -229,7 +229,7 @@ html, body{
 }
 
 .parkreq{
-    overflow: hidden;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -395,9 +395,10 @@ header .current-date{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  margin-top: 10%;
   font-size: 20px;
   color: #fff;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .rewardp{
@@ -555,7 +556,7 @@ nav ul li.active {
 .carpools{
   display: flex;
   flex-direction: column;
-  /* justify-content: s; */
+  justify-content: space-between;
   align-self: center;
   height: 25%;
   background-color: rgb(0, 174, 239);
@@ -618,6 +619,12 @@ nav ul li.active {
 
 
 /* Driver carpool */
+.travelnumber{
+  border: none;
+  font-size: 15px;
+  width: 40%;
+}
+
 .carpooltitle{
   display: flex;
   flex-direction: column;
@@ -659,6 +666,6 @@ nav ul li.active {
   height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
