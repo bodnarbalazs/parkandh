@@ -78,11 +78,13 @@ function getReservationsByUserId() {
                     if(data[i].ownerId ==data[i].surrogated){
                         f = data[i].fromDate.split('T')[0]
                         console.log(f)
-                        document.getElementById(f).style.backgroundColor = "green"
+                        document.getElementById(f).classList.add("havespot")
+                        document.getElementById(f).classList.remove("nhavespot")
                     }
                     else{
                         f = data[i].fromDate.split('T')[0]
-                        document.getElementById(f).style.backgroundColor = "red"
+                        document.getElementById(f).classList.add("nhavespot")
+                        document.getElementById(f).classList.remove("havespot")
                     }
                 }
                 catch{
