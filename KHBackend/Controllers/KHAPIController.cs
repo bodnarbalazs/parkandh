@@ -73,11 +73,17 @@ namespace KHBackend.Controllers
             return Ok(UserId);
         }
         [HttpPost]
-        [Route("postReservationSubmissionWithId/{ReservationId}")]
-        public IActionResult PostReservationSubmission(int ReservationId)
+        [Route("postReservationSubmissionWithId/{ReservationId}/{UserId}")]
+        public IActionResult PostReservationSubmission(int ReservationId,int UserId)
         {
             ParkContext parkContext = new ParkContext();
-            return Ok(ReservationId);
+            var res=parkContext.ParkingReservations.Where(r => r.Id == ReservationId).FirstOrDefault();
+            var u = parkContext.Users.Where(u => u.Id == UserId).FirstOrDefault();
+            if (res == null||u==null) { return BadRequest(); }
+            res.Surrogated = null;
+            u.Coin++;
+            parkContext.SaveChanges();
+            return Ok();
         }
         [HttpPost]
         [Route("postReservationSubmissionCancellation/{UserId}/{FromDate}/{ToDate}")]
