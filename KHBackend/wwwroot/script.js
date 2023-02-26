@@ -79,12 +79,17 @@ function getReservationsByUserId() {
         .then((data) => {
             console.log(data);
             for(i=0; i<data.length; i++){
-                console.log(data[i].fromDate.split("T")[0])
-                if(data[i].ownerId == i.surrogated){
-                    document.getElementById(data[i].fromDate.split("T")[0]).style.backgroundColor = "green"
+                try{
+                    console.log(data[i].fromDate.split("T")[0])
+                    if(data[i].ownerId == i.surrogated){
+                        document.querySelectorAll("#data[i].fromDate.split('T')[0]").style.backgroundColor = "green"
+                    }
+                    else{
+                        document.querySelectorAll("#data[i].fromDate.split('T')[0]").style.backgroundColor = "red"
+                    }
                 }
-                else{
-                    document.getElementById(data[i].fromDate.split("T")[0]).style.backgroundColor = "red"
+                catch{
+                    return
                 }
                 
             }})
