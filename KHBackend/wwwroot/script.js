@@ -57,7 +57,7 @@ function login() {
 }
 document.onload = () => {
     if (localStorage.getItem("user")!=null) {
-        user = localStorage.getItem("user");
+        user = JSON.parse(localStorage.getItem("user"));
         if (user.privateParking!="null") {
             location.replace("/atad2.html")
         } else {
