@@ -12,7 +12,10 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-let user = null;
+var user = null;
+window.onload = () => {
+        user = JSON.parse(localStorage.getItem("user"));
+}
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{
@@ -55,16 +58,7 @@ function login() {
             }
         });
 }
-document.onload = () => {
-    if (localStorage.getItem("user")!=null) {
-        user = JSON.parse(localStorage.getItem("user"));
-        if (user.privateParking!="null") {
-            location.replace("/atad2.html")
-        } else {
-            location.replace("/keres.html")
-        }
-    }
-}
+
 
 function getMonthName(monthNumber) {
     const date = new Date();
