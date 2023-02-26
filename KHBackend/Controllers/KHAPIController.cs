@@ -70,8 +70,14 @@ namespace KHBackend.Controllers
         public IActionResult PostReservationSubmission(int UserId, DateTime fromDate, DateTime toDate, int BeneficiaryId)
         {
             ParkContext parkContext = new ParkContext();
-            parkContext.ParkingReservations.Where(r => r.FromDate >= fromDate && r.ToDate <= toDate).ToList();
             return Ok(UserId);
+        }
+        [HttpPost]
+        [Route("postReservationSubmissionWithId/{ReservationId}")]
+        public IActionResult PostReservationSubmission(int ReservationId)
+        {
+            ParkContext parkContext = new ParkContext();
+            return Ok(ReservationId);
         }
         [HttpPost]
         [Route("postReservationSubmissionCancellation/{UserId}/{FromDate}/{ToDate}")]

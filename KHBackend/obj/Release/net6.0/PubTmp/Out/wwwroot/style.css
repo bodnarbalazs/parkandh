@@ -314,7 +314,6 @@ header .current-date{
 }
 .days li.inactive{
   color: #aaa;
-  display: none;
 }
 .days li.active{
   color: #fff;
@@ -670,3 +669,15 @@ nav ul li.active {
   justify-content: space-between;
   align-items: center;
 }
+
+.havespot{
+  border-color: green;
+  border-radius: 50%;
+
+}
+
+.nhavespot{
+  border-color: red;
+  border-radius: 50%;
+}
+
