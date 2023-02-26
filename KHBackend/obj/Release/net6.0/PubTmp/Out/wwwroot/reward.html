@@ -10,12 +10,22 @@
         <script src="test.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
         <link rel="stylesheet" href="https://kit.fontawesome.com/501a7d5006.css" crossorigin="anonymous">
+        <script src="info.js" defer></script>
       </head>
 <body>
   <div class="repeatbackround"></div>
   <div class="laptopsize">
     <div class="toprow">
+      <div class="coindiv">
+        <p class="coinnum">85</p>
+        <i class="fa-solid fa-coins"></i>
+      </div>
       <img class="khlogo" src="./images/logo3.png" alt="">
+      <i class="fa fa-circle-info" onclick="info()"></i>
+    </div>
+    <div class="infodiv" id="infodiv">
+      <p>-Pont gyűjtése: parkolóhely átadással, telekocsiban való részvétellel</p>
+      <p>-Pontok elköltése: Egyéni nyereményekre, illetve minden kapott pont közelíti a csapatot a közös célhoz</p>
     </div>
     <div class="mainrewarddiv">
       <p class="carpooltitle">Jutalmak</p>
@@ -29,8 +39,6 @@
         <div class="rewardp"><p>Edzőterem bérlet</p></div>
         <div class="rewardp"><p>Telefon Upgrade</p></div>
         <div class="rewardp"><p>Laptop Upgrade</p></div>
-      </div>
-      <div class="rewarddiv1">
         Csoportos csoda
         <div class="rewardp"><p >Céges csapatépítő</p></div>
         <div class="rewardp"><p >Céges rendezvény</p></div>
