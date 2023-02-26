@@ -16,6 +16,7 @@ var user = null;
 window.onload = () => {
     user = JSON.parse(localStorage.getItem("user"));
     document.getElementsByClassName("coinnum")[0].innerHTML = user.coin;
+    getReservationsByUserId();
 }
 function sender(input){
     const date=document.getElementById("date").value

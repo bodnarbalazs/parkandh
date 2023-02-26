@@ -15,7 +15,7 @@ function giveSpot(element){
     .then((response) => response.json())
         .then((data) => {
             for (let i = 0; i < data.length; i++) {
-                if (data[i].fromDate.split('T')[0]=clickedId) {
+                if (data[i].fromDate.split('T')[0]==clickedId) {
                     console.log(data[i].id)
                 }
                 

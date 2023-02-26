@@ -73,11 +73,14 @@ namespace KHBackend.Controllers
             return Ok(UserId);
         }
         [HttpPost]
-        [Route("postReservationSubmissionWithId/{ReservationId}/{UserId}")]
-        public IActionResult PostReservationSubmissionWithId(int ReservationId,int UserId)
+        [Route("postReservationSubmissionWithId/{ClickedElementId}/{UserId}")]
+        public IActionResult PostReservationSubmissionWithId(string ClickedElementId,int UserId)
         {
             ParkContext parkContext = new ParkContext();
-            var res=parkContext.ParkingReservations.Where(r => r.Id == ReservationId).FirstOrDefault();
+            int year = int.Parse(ClickedElementId.Split('-')[0]);
+            int month = int.Parse(ClickedElementId.Split('-')[1]);
+            int day = int.Parse(ClickedElementId.Split('-')[2]);
+            var res=parkContext.ParkingReservations.Where(r => r.FromDate.Year==year&& r.FromDate.Month == month && r.FromDate.Day == day).FirstOrDefault();
             var u = parkContext.Users.Where(u => u.Id == UserId).FirstOrDefault();
             if (res == null||u==null) { return BadRequest(); }
             res.Surrogated = null;
