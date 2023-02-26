@@ -12,5 +12,8 @@ function giveSpot(element){
     var clickedId = element.target.id;
     console.log(clickedId);
     fetch("postReservationSubmissionWithId/" + clickedId + "/" + uId)
-    .then(()=>{alert("Sikeresen leadtad a parkolót!");user.coin++;})
+        .then(() => {
+            alert("Sikeresen leadtad a parkolót!");
+            user.coin++;
+        })
 }

@@ -4,7 +4,7 @@
     fetch("postReservationSubmissionWithId/" + resId + "/" + uId)
         .then(r => JSON.parse(r))
         .then(d => {
-
+            getReservationsByUserId();
         });
 }
 
