@@ -59,7 +59,7 @@ function calendarId(){
     document.querySelectorAll(".da").forEach(function(item){
         const day=item.innerText;
         if (0<day&&day<10) {
-            day="0"+day; 
+            day="0"+String(day); 
         }
         item.id=year+"-"+"0"+(monthNames.indexOf(month)+1)+"-"+day;
     })
