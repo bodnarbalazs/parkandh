@@ -670,14 +670,11 @@ nav ul li.active {
   align-items: center;
 }
 
-.havespot{
-  border-color: green !important;
-  border-radius: 50% !important;
-
+.havespot::before{
+  background-color: green !important;
 }
 
-.nhavespot{
-  border-color: red !important;
-  border-radius: 50% !important;
+.nhavespot::before{
+  background-color: red !important;
 }
 
