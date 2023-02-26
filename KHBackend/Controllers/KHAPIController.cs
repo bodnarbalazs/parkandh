@@ -34,7 +34,7 @@ namespace KHBackend.Controllers
             ParkContext parkContext = new ParkContext();
             try
             {
-                return Ok(parkContext.ParkingReservations.Where(r=>r.Owner.Id==UserId).ToList());
+                return Ok(parkContext.ParkingReservations.Where(r=>r.Owner.Id==UserId&&r.Surrogated==UserId).ToList());
             }
             catch (Exception)
             {
@@ -74,7 +74,7 @@ namespace KHBackend.Controllers
         }
         [HttpPost]
         [Route("postReservationSubmissionWithId/{ReservationId}/{UserId}")]
-        public IActionResult PostReservationSubmission(int ReservationId,int UserId)
+        public IActionResult PostReservationSubmissionWithId(int ReservationId,int UserId)
         {
             ParkContext parkContext = new ParkContext();
             var res=parkContext.ParkingReservations.Where(r => r.Id == ReservationId).FirstOrDefault();

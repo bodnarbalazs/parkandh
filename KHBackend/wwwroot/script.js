@@ -93,4 +93,7 @@ function getReservationsByUserId() {
                 }
                 
             }})
-} 
+}
+function onChevClicked() {
+    getReservationsByUserId();
+}
