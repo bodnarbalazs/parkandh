@@ -64,6 +64,7 @@ function calendarId(){
         }
 
         item.id=year+"-"+"0"+(monthNames.indexOf(month)+1)+"-"+day;
+        item.addEventListener("click", giveSpot);
     })
 }
 

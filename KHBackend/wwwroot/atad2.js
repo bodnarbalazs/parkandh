@@ -7,3 +7,9 @@
 
         });
 }
+
+function giveSpot(element){
+    var clickedId = element.target.id;
+    console.log(clickedId);
+    
+}
