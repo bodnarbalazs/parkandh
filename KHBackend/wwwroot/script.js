@@ -81,15 +81,18 @@ function getReservationsByUserId() {
             for(i=0; i<data.length; i++){
                 try{
                     console.log(data[i].fromDate.split("T")[0])
-                    if(data[i].ownerId == i.surrogated){
-                        document.querySelectorAll("#data[i].fromDate.split('T')[0]").style.backgroundColor = "green"
+                    if(data[i].ownerId ==data[i].surrogated){
+                        f = data[i].fromDate.split('T')[0]
+                        console.log(f)
+                        document.getElementById(f).style.backgroundColor = "green"
                     }
                     else{
-                        document.querySelectorAll("#data[i].fromDate.split('T')[0]").style.backgroundColor = "red"
+                        f = data[i].fromDate.split('T')[0]
+                        document.getElementById(f).style.backgroundColor = "red"
                     }
                 }
                 catch{
-                    return
+                    
                 }
                 
             }})
