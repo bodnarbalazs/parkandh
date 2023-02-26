@@ -19,33 +19,40 @@
         <img class="khlogo" src="./images/logo3.png" alt="">
       </div>
       <div class="parkreq">
+        <div class="calendrabt">
+          <p class="carpooltitle">Telekocsi</p>
+          <div class="togglediv">
+            <button onclick="window.location.href='./drivercarpool.html';" class="carpooltoggle">Söfőr</button>
+            <button onclick="window.location.href='./membercarpool.html';" class="carpooltoggle"  id="activetoggle">Utas</button>
+          </div>
+
           <div class="maincalendar">
-              <div class="wrapper">
-                  <header>
-                    <p class="current-date"></p>
-                    <div class="icons">
-                      <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                      <span id="next" class="material-symbols-rounded">chevron_right</span>
-                    </div>
-                  </header>
-                  <div class="calendar">
-                    <ul class="weeks">
-                      <li>V</li>
-                      <li>H</li>
-                      <li>K</li>
-                      <li>Sze</li>
-                      <li>Cs</li>
-                      <li>P</li>
-                      <li>Szo</li>
-                    </ul>
-                    <ul class="days"></ul>
+            <div class="wrapper">
+                <header>
+                  <p class="current-date"></p>
+                  <div class="icons">
+                    <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                    <span id="next" class="material-symbols-rounded">chevron_right</span>
                   </div>
-              </div>
-               
+                </header>
+                <div class="calendar">
+                  <ul class="weeks">
+                    <li>V</li>
+                    <li>H</li>
+                    <li>K</li>
+                    <li>Sze</li>
+                    <li>Cs</li>
+                    <li>P</li>
+                    <li>Szo</li>
+                  </ul>
+                  <ul class="days"></ul>
+                </div>
+            </div>
+              
           </div>
-          <div class="carsp">
   
-          </div>
+        </div>
+        
         <div class="carpools" id="carpools">
           <div class="carpool"><p >Béla</p> 9:00</div>
           <div class="carpool"><p >Jani</p> 8:00</div>
