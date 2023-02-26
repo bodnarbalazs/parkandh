@@ -60,14 +60,12 @@ namespace KHBackend.Controllers
         [Route("postReservationSubmission/{UserId}/{FromDate}/{ToDate}/{Beneficiary}")]
         public IActionResult PostReservationSubmission(int UserId, DateTime fromDate, DateTime toDate, int BeneficiaryId)
         {
-
             return Ok(UserId);
         }
         [HttpPost]
         [Route("postReservationSubmissionCancellation/{UserId}/{FromDate}/{ToDate}")]
         public IActionResult PostReservationSubmissionCancellation(int UserId, DateTime fromDate, DateTime toDate, int BeneficiaryId)
         {
-
             return Ok(UserId);
         }
         [HttpPost]
@@ -75,7 +73,6 @@ namespace KHBackend.Controllers
         
         public IActionResult PostUserSettingsUpdate(int UserId, string userSettings)
         {
-
             return Ok(UserId);
         }
         [HttpPost]
