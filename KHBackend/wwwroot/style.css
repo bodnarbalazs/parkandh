@@ -314,7 +314,6 @@ header .current-date{
 }
 .days li.inactive{
   color: #aaa;
-  display: none;
 }
 .days li.active{
   color: #fff;
