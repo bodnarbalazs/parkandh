@@ -12,7 +12,7 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-let user = undefined;
+let user = null;
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{

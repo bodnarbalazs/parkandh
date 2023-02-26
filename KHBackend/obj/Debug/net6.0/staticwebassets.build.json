@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4vZHX1wZr807Z5D8+MUMflS8T2LqQ6vmNddbnvYUXBg=",
+  "Hash": "fhovRquKUH0RM4Mw7FCBxNGv73wja6o9JAnyHVpPQ4E=",
   "Source": "KHBackend",
   "BasePath": "_content/KHBackend",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\info.js",
+      "SourceId": "KHBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\",
+      "BasePath": "_content/KHBackend",
+      "RelativePath": "info.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\info.js"
     },
     {
       "Identity": "\\\\Mac\\Home\\Desktop\\Hackathon\\KHBackend\\wwwroot\\keres.html",
