@@ -10,17 +10,18 @@ namespace KHBackend.Controllers
     {
         [HttpGet]
         [Route("getUserByEmail/{Email}/{Password}")]
-        public IActionResult GetUserByEmail(string email,string password)
+        public IActionResult GetUserByEmail(string Email,string Password)
         {
             ParkContext parkContext = new ParkContext();
-            User? user =parkContext.Users.Where(u => u.Email == email.ToLower()).ToList().FirstOrDefault();
-            if (user==null)
+            int c=parkContext.Users.Count();
+            User? user =parkContext.Users.Where(u => u.Email == Email).ToList().FirstOrDefault();
+            if (user == null)
             {
-                return BadRequest("Hibás felhasználónév vagy jelszó.");
+                return Problem();
             }
-            else if(password != user.Password)
+            else if (user.Password!=Password)
             {
-                return BadRequest("Hibás felhasználónév vagy jelszó.");
+                return Problem();
             }
             return Ok(user);
         }

@@ -12,7 +12,7 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-
+let user = undefined;
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{
@@ -27,25 +27,41 @@ function sender(input){
         result=>console.log(result)
     )
 }
+let t = null;
 function login() {
     const email=document.getElementById("user").value;
     const pass = document.getElementById("pass").value;
+    if (email == "" || pass == "") {
+        alert("A bejelentkezési mezők nem lehetnek üresek.")
+        return;
+    }
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(r => r.json())
-        .then(d => {
-            console.log(d);
-            localStorage.setItem("user", JSON.stringify(d));
-            console.log(d.privateParking=='null');
-            if(d=="Hibás felhasználónév vagy jelszó."){
-                alert("Hibás adatok!")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data.id);
+            if (data.id==null) {
+                alert("Hibás felhasználónév vagy jelszó!")
+                location.reload();
+                return;
             }
-            else if(d.privateParking=='null'){
-                console.log("heeeeyhoooo");
-                window.location.replace("/keres.html");
-            }else{
-                window.location.replace("/atad2.html");
+            user = data;
+            localStorage.setItem("user", JSON.stringify(user));
+            if (user.privateParking != "null") {
+                location.replace("/atad.html")
+            } else {
+                location.replace("/keres.html")
             }
-        })
+        });
+}
+document.onload = () => {
+    if (localStorage.getItem("user")!=null) {
+        user = localStorage.getItem("user");
+        if (user.privateParking!="null") {
+            location.replace("/atad.html")
+        } else {
+            location.replace("/keres.html")
+        }
+    }
 }

@@ -12,7 +12,7 @@ document.querySelector("select").addEventListener("change",function(e){
     const who= e.target.value
     sender(who)
 })*/
-
+let user = undefined;
 function sender(input){
     const date=document.getElementById("date").value
     fetch("proba.php",{
@@ -38,20 +38,30 @@ function login() {
     console.log(email);
     console.log(pass);
     fetch("api/getUserByEmail/" + email + "/" + pass)
-        .then(d => {
-            console.log("d:");
-            console.log(d);
-            localStorage.setItem("user", JSON.stringify(d));
-            console.log(d.privateParking == 'null');
-            t = d;
-            if (d.email == null) {
-                alert("Hibás adatok!")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data.id);
+            if (data.id==null) {
+                alert("Hibás felhasználónév vagy jelszó!")
+                location.reload();
+                return;
             }
-            else if (JSON.parse(d).privateParking == 'null') {
-                console.log("heeeeyhoooo");
-                window.location.replace("/keres.html");
+            user = data;
+            localStorage.setItem("user", JSON.stringify(user));
+            if (user.privateParking != "null") {
+                location.replace("/atad.html")
             } else {
-                window.location.replace("/atad2.html");
+                location.replace("/keres.html")
             }
-        })
+        });
+}
+document.onload = () => {
+    if (localStorage.getItem("user")!=null) {
+        user = localStorage.getItem("user");
+        if (user.privateParking!="null") {
+            location.replace("/atad.html")
+        } else {
+            location.replace("/keres.html")
+        }
+    }
 }
