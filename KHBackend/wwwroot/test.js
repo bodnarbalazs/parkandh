@@ -57,10 +57,12 @@ function calendarId(){
         "September", "October", "November", "December"
       ];
     document.querySelectorAll(".da").forEach(function(item){
-        const day=item.innerText;
-        if (0<Number.parseInt(day)&&Number.parseInt(day)<10) {
-            day="0"+day; 
+        var day=item.innerText;
+        if (parseInt(day)>0 && parseInt(day)<10) 
+        {
+            day ="0"+day;
         }
+
         item.id=year+"-"+"0"+(monthNames.indexOf(month)+1)+"-"+day;
     })
 }
