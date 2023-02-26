@@ -130,6 +130,38 @@ html, body{
   margin-right: 3%;
 }
 
+.fa-coins{
+  color: #fff;
+  font-size: 23px;
+  margin-left: 3%;
+}
+
+.coindiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.coinnum{
+  color: #fff;
+  font-size: 23px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.infodiv{
+  display: none;
+  background-color: #fff;
+  width: 70%;
+  height: auto;
+  padding: 3%;
+  border-radius: 15px;
+  opacity: 0.85;
+  position: fixed;
+  top: 8%;
+  z-index: 10;
+  font-size: 20px;
+}
+
 #nodisplay{
   color: rgb(0, 174, 239);
 }
@@ -197,7 +229,7 @@ html, body{
 }
 
 .parkreq{
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -364,6 +396,8 @@ header .current-date{
   justify-content: space-around;
   flex-direction: column;
   font-size: 20px;
+  color: #fff;
+  overflow: hidden;
 }
 
 .rewardp{
@@ -375,6 +409,8 @@ header .current-date{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: black;
+  opacity: 0.8;
 }
 
 .mainrewarddiv{
