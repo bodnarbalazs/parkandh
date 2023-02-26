@@ -678,3 +678,15 @@ nav ul li.active {
   background-color: red !important;
 }
 
+.pastc{
+  background-color: #fff;
+  opacity: 0.8;
+
+}
+
+.newc{
+  background-color:#aaa;
+  opacity: 0.8;
+
+}
+

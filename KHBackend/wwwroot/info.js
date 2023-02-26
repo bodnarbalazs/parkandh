@@ -8,6 +8,16 @@ function info() {
     console.log("work");
 }
 
+function chat() {
+    var x = document.getElementById("chatdiv");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+    console.log("work");
+}
+
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 
