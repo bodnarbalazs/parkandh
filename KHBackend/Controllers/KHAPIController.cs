@@ -12,7 +12,6 @@ namespace KHBackend.Controllers
         [Route("getUserByEmail/{Email}/{Password}")]
         public IActionResult GetUserByEmail(string Email,string Password)
         {
-            Email = "jw@gmail.com";
             ParkContext parkContext = new ParkContext();
             int c=parkContext.Users.Count();
             User? user =parkContext.Users.Where(u => u.Email == Email).ToList().FirstOrDefault();
